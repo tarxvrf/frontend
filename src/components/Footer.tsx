@@ -9,7 +9,7 @@ export default function Footer() {
         {/* BRAND */}
         <div>
           <h2 className="text-white text-xl font-bold mb-4">
-            DevProfile
+            Digitek8
           </h2>
           <p className="text-sm">
             Membangun website modern, cepat, dan scalable untuk bisnis Anda.
