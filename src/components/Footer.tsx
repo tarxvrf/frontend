@@ -60,7 +60,7 @@ export default function Footer() {
 
       {/* BOTTOM */}
       <div className="border-t border-white/10 mt-10 pt-6 text-center text-sm">
-        © {new Date().getFullYear()} DevProfile. All rights reserved.
+        © {new Date().getFullYear()} Digitek8. All rights reserved.
       </div>
 
     </footer>
