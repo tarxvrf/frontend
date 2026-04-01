@@ -1,44 +1,16 @@
-import { useEffect } from "react";
+import { Link } from "@tanstack/react-router";
 
-type Props = {
-  isOpen: boolean;
-  onClose: () => void;
-};
-
-export default function MobileSidebar({ isOpen, onClose }: Props) {
-  // Close pakai ESC
-  useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-    };
-    window.addEventListener("keydown", handleEsc);
-    return () => window.removeEventListener("keydown", handleEsc);
-  }, [onClose]);
-
+export default function Navbar() {
   return (
-    <>
-      {/* Overlay */}
-      <div
-        className={`fixed inset-0 bg-black/40 z-40 transition-opacity ${
-          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
-        onClick={onClose}
-      />
+    <nav className="fixed w-full top-0 z-50 backdrop-blur bg-black/30 border-b border-white/10 px-8 py-4 flex justify-between">
+      <h1 className="text-blue-500 font-bold">DevProfile</h1>
 
-      {/* Sidebar */}
-      <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white z-50 shadow-lg transform transition-transform duration-300 ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        <div className="p-4 font-bold border-b">Menu</div>
-
-        <nav className="flex flex-col p-4 gap-3">
-          <a href="/" className="hover:text-blue-500">Home</a>
-          <a href="/products" className="hover:text-blue-500">Products</a>
-          <a href="/about" className="hover:text-blue-500">About</a>
-        </nav>
+      <div className="flex gap-6 text-sm">
+       <Link to={"/"}>Home</Link>
+        <Link to={"/services"}>Services</Link>
+        <Link to={"/projects"}>Projects</Link>
+        <Link to={"/contact"}>Contact</Link>
       </div>
-    </>
+    </nav>
   );
 }
