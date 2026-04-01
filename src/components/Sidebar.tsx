@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 
 export default function Sidebar() {
@@ -37,9 +38,10 @@ export default function Sidebar() {
 
         {/* Menu */}
         <nav className="flex flex-col gap-4 p-4">
-          <a href="#" className="hover:text-gray-300">Home</a>
-          <a href="#" className="hover:text-gray-300">About</a>
-          <a href="#" className="hover:text-gray-300">Contact</a>
+          <Link to={"/"} className="hover:text-gray-300">Home</Link>
+          <Link to={""} className="hover:text-gray-300">Login</Link>
+          <Link to={""} className="hover:text-gray-300">Register</Link>
+           <Link to={"/contact"} className="hover:text-gray-300">Contact</Link>
         </nav>
       </aside>
     </>
