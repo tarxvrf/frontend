@@ -9,7 +9,7 @@ export default function Sidebar() {
       {/* Button Hamburger */}
       <button
         onClick={() => setOpen(true)}
-        className="p-2 text-2xl md:hidden"
+        className="p-2 text-2xl md:hidden fixed top-0 z-50 w-full flex"
       >
         ☰
       </button>

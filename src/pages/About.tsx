@@ -12,7 +12,7 @@ export default function About() {
 
       {/* TEXT */}
       <div>
-        <h2 className="text-3xl font-bold mb-4">About Me</h2>
+        <h2 className="text-3xl font-bold mb-4 text-center">About Me</h2>
 
         <p className="text-gray-400">
           Saya adalah fullstack developer yang fokus pada teknologi modern seperti React, Express, dan Supabase.
